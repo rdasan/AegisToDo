@@ -4,11 +4,24 @@
     ViewBag.Title = "Aegis ToDo Application";
 }
 
+@*<div>
+    <a >
+        @Html.Action("Create New", "Create")
+    </a>
+</div>*@
+
 <div>
-    <p>
-        @Html.ActionLink("Create New", "Create")
-    </p>
+    <button id="addbutton" class="btn btn-default">Add</button>
+    <div id="addnew"></div>
+    <script>
+        document.getElementById("addbutton").onclick = function () { addItem() };
+        function addItem() {
+           $("#addnew").load("@Html.Raw(Url.Action("Create", "ToDo"))")
+        }
+    </script>
 </div>
+
+
 
 <body>
     <header>

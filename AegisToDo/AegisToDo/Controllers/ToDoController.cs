@@ -2,6 +2,8 @@
 using System.Web.Mvc;
 using System.Threading.Tasks;
 using System.Linq;
+using AegisToDo.Models;
+using System.Net;
 
 namespace AegisToDo.Controllers
 {
@@ -30,9 +32,23 @@ namespace AegisToDo.Controllers
         }
 
         //GET: ToDoItems/Create
-        public async Task<ActionResult> Create()
+        public ActionResult Create()
         {
-            return View("Create");
+            return PartialView("Create");
+        }
+
+        //POST: ToDoItems/Create
+        [HttpPost]
+        public async Task<ActionResult> AddItem(ToDoItem itemToAdd)
+        {
+            if(!ModelState.IsValid)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var newItem = await repository.AddItem(itemToAdd);
+
+            return RedirectToAction("Index");
         }
     }
 }
