@@ -32,7 +32,7 @@ namespace AegisToDo.Controllers
         //GET: ToDoItems/Create
         public async Task<ActionResult> Create()
         {
-            return PartialView("Create");
+            return View("Create");
         }
     }
 }
