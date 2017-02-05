@@ -50,5 +50,31 @@ namespace AegisToDo.Controllers
 
             return RedirectToAction("Index");
         }
+
+        //GET: ToDoItems/Edit/5
+        public async Task<ActionResult> Edit(int? id)
+        {
+            if(id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var item = await repository.GetItemById(id.Value);
+
+            return PartialView("Edit", item);
+        }
+
+        // GET: ToDoItems/Delete/5
+        public async Task<ActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            await repository.DeleteItem(id.Value);
+
+            return RedirectToAction("Index");
+        }
     }
 }

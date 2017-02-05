@@ -64,5 +64,9 @@ th {
     background-color: #dddddd;
 }
 
+.imgbutton {
+    cursor: pointer;
+}
+
 
 

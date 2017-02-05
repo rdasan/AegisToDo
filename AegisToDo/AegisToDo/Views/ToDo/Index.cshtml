@@ -4,12 +4,6 @@
     ViewBag.Title = "Aegis ToDo Application";
 }
 
-@*<div>
-    <a >
-        @Html.Action("Create New", "Create")
-    </a>
-</div>*@
-
 <div>
     <button id="addbutton" class="btn btn-default">Add</button>
     <div id="addnew"></div>
@@ -21,7 +15,10 @@
     </script>
 </div>
 
+<div>
+<div id="edit"></div>
 
+</div>
 
 <body>
     <header>
@@ -33,6 +30,8 @@
                 <th>Item Title</th>
                 <th>Due Date</th>
                 <th>Completed</th>
+                <th></th>
+                <th></th>
             </tr>
             @foreach (var item in Model)
             {
@@ -40,6 +39,21 @@
                     <td>@item.Title</td>
                     <td>@item.DueDate</td>
                     <td>@item.IsDone</td>
+                    <td>
+                        <input id="edit-button" type="image" class="imgbutton" src="~/Content/icons/editicon.png"
+                               onclick="location.href='@Url.Action("Edit","ToDo", new { id = item.ItemId })' " />
+                        @*<input id="edit-button" type="image" class="imgbutton" src="~/Content/icons/editicon.png" />
+                                
+                        <script>
+                            $('#edit-button').onclick(function(){
+                                $('#edit').load(@Url.Action("Edit", "ToDo", new { id = item.ItemId}))
+                            })
+                        </script>*@
+                    </td>
+                    <td>
+                        <input type="image" class="imgbutton" src="~/Content/icons/trashcan.png" 
+                               onclick="location.href='@Url.Action("Delete","ToDo", new { id = item.ItemId })' " />
+                    </td>
                 </tr>
 
             }
