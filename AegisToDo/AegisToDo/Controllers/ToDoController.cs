@@ -1,5 +1,7 @@
 ﻿using AegisToDo.Repository;
 using System.Web.Mvc;
+using System.Threading.Tasks;
+using System.Linq;
 
 namespace AegisToDo.Controllers
 {
@@ -13,9 +15,16 @@ namespace AegisToDo.Controllers
         }
 
         // GET: ToDoItems
-        public async System.Threading.Tasks.Task<ActionResult> Index()
+        public async Task<ActionResult> Index()
         {
             var toDoItems = await repository.GetItems();
+
+            if(!toDoItems.Any())
+            {
+                ViewBag.Message = "No items found. Please add your first item.";
+            }
+
+            ViewBag.Message = "Manage your ToDo items here";
 
             return View(toDoItems);
         }

@@ -4,16 +4,10 @@
     ViewBag.Title = "Aegis ToDo Application";
 }
 
-<head>
-    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
-</head>
-
-<div class="jumbotron">
-    <h3><strong>@ViewBag.Title</strong></h3>
-    <h4>@ViewBag.Message</h4>
-</div>
-
 <body>
+    <header>
+        <h3>@ViewBag.Message</h3>
+    </header>
     <div>
         <table>
             <tr>
