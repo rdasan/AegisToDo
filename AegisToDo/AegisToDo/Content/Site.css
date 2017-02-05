@@ -24,7 +24,7 @@ textarea {
     font-weight: 200;
     line-height: 2.1428571435;
     color: white;
-    background-color: black;
+    background-color: cornflowerblue;
     text-align: center;
 }
 
@@ -39,7 +39,7 @@ textarea {
     font-weight: normal;  
     line-height: 1;
     color: white;
-    background-color: black; 
+    background-color: cornflowerblue; 
     text-align: right;
     position:fixed;
     width: 100%;

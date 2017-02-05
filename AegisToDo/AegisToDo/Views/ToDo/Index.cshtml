@@ -4,6 +4,12 @@
     ViewBag.Title = "Aegis ToDo Application";
 }
 
+<div>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+</div>
+
 <body>
     <header>
         <h3>@ViewBag.Message</h3>
@@ -11,13 +17,15 @@
     <div>
         <table>
             <tr>
-                <th>ToDo Title</th>
-                <th>Done</th>
+                <th>Item Title</th>
+                <th>Due Date</th>
+                <th>Completed</th>
             </tr>
             @foreach (var item in Model)
             {
                 <tr>
                     <td>@item.Title</td>
+                    <td>@item.DueDate</td>
                     <td>@item.IsDone</td>
                 </tr>
 

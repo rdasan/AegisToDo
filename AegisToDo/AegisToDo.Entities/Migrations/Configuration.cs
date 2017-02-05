@@ -42,7 +42,15 @@ namespace AegisToDo.Entities.Migrations
                 IsCompleted = false
             };
 
-            context.ToDoItems.AddOrUpdate(milkItem, laundryItem, libraryItem);
+            var homeworkItem = new ToDoItem
+            {
+                ItemId = 4,
+                Title = "Finish Homework",
+                DueDate = new DateTime(2017, 1, 5),
+                IsCompleted = false
+            };
+
+            context.ToDoItems.AddOrUpdate(milkItem, laundryItem, libraryItem, homeworkItem);
 
             context.SaveChanges();
         }
