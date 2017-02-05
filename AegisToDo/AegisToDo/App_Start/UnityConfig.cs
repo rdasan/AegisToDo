@@ -1,6 +1,8 @@
 using System;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
+using AegisToDo.Entities.DatabaseContext;
+using AegisToDo.Repository;
 
 namespace AegisToDo.App_Start
 {
@@ -36,7 +38,8 @@ namespace AegisToDo.App_Start
             // container.LoadConfiguration();
 
             // TODO: Register your types here
-            // container.RegisterType<IProductRepository, ProductRepository>();
+            container.RegisterType<IToDoContext, ToDoContext>();
+            container.RegisterType<IToDoItemsRepository, ToDoItemsRepository>();
         }
     }
 }

@@ -153,8 +153,11 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\AddToDoItemRequest.cs" />
     <Compile Include="Models\ToDoItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IToDoItemsRepository.cs" />
+    <Compile Include="Repository\ModelMapper.cs" />
     <Compile Include="Repository\ToDoItemsRepository.cs" />
   </ItemGroup>
   <ItemGroup>

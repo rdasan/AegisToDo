@@ -1,13 +1,23 @@
-﻿using System.Web.Mvc;
+﻿using AegisToDo.Repository;
+using System.Web.Mvc;
 
 namespace AegisToDo.Controllers
 {
     public class ToDoController : Controller
     {
-        // GET: ToDoItems
-        public ActionResult Index()
+        private IToDoItemsRepository repository;
+
+        public ToDoController(IToDoItemsRepository toDoRepository)
         {
-            return View();
+            repository = toDoRepository;
+        }
+
+        // GET: ToDoItems
+        public async System.Threading.Tasks.Task<ActionResult> Index()
+        {
+            var toDoItems = await repository.GetItems();
+
+            return View(toDoItems);
         }
     }
 }

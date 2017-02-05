@@ -10,5 +10,7 @@ namespace AegisToDo.Models
         public string Title { get; set; }
 
         public bool IsDone { get; set; }
+
+        public bool IsOverDue { get; set; }
     }
 }
