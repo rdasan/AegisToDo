@@ -37,7 +37,7 @@ namespace AegisToDo.Controllers
             return PartialView("Create");
         }
 
-        //POST: ToDoItems/Create
+        //POST: ToDoItems/AddItem
         [HttpPost]
         public async Task<ActionResult> AddItem(ToDoItem itemToAdd)
         {
@@ -51,8 +51,8 @@ namespace AegisToDo.Controllers
             return RedirectToAction("Index");
         }
 
-        //GET: ToDoItems/Edit/5
-        public async Task<ActionResult> Edit(int? id)
+        //GET: ToDoItems/Get/5
+        public async Task<ActionResult> Get(int? id)
         {
             if(id == null)
             {
@@ -62,6 +62,19 @@ namespace AegisToDo.Controllers
             var item = await repository.GetItemById(id.Value);
 
             return PartialView("Edit", item);
+        }
+
+        //POST: ToDoItems/UpdateItem/5
+        public async Task<ActionResult> UpdateItem(ToDoItem itemToUpdate)
+        {
+            if (!ModelState.IsValid)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var updatedItem = await repository.UpdateItem(itemToUpdate);
+
+            return RedirectToAction("Index");
         }
 
         // GET: ToDoItems/Delete/5

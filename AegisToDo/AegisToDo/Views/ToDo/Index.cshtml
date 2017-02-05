@@ -42,7 +42,7 @@
                     <td>@item.IsDone</td>
                     <td>
                         <input id="edit-button" type="image" class="imgbutton" src="~/Content/icons/editicon.png"
-                               onclick="location.href='@Url.Action("Edit","ToDo", new { id = item.ItemId })' " />                     
+                               onclick="location.href='@Url.Action("Get","ToDo", new { id = item.ItemId })' " />                     
                     </td>
                     <td>
                         <input type="image" class="imgbutton" src="~/Content/icons/trashcan.png" 
