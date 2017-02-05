@@ -1,31 +1,44 @@
 namespace AegisToDo.Entities.Migrations
 {
+    using Model;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<AegisToDo.Entities.ToDoContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<ToDoContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(AegisToDo.Entities.ToDoContext context)
+        protected override void Seed(ToDoContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            var milkItem = new ToDoItem
+            {
+                ItemId = 1,
+                Title = "Buy Milk",
+                IsCompleted = false
+            };
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            var laundryItem = new ToDoItem
+            {
+                ItemId = 2,
+                Title = "Pick clothes from dry cleaner",
+                IsCompleted = true
+            };
+
+            var libraryItem = new ToDoItem
+            {
+                ItemId = 3,
+                Title = "Renew library books",
+                IsCompleted = false
+            };
+
+            context.ToDoItems.AddOrUpdate(milkItem, laundryItem, libraryItem);
+
+            context.SaveChanges();
         }
     }
 }
