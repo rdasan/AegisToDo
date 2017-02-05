@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseContext\IToDoContext.cs" />
     <Compile Include="Migrations\201702050129525_Initial.cs" />
     <Compile Include="Migrations\201702050129525_Initial.Designer.cs">
       <DependentUpon>201702050129525_Initial.cs</DependentUpon>
@@ -56,7 +57,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\ToDoItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ToDoContext.cs" />
+    <Compile Include="DatabaseContext\ToDoContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
