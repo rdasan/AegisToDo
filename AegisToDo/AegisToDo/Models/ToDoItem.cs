@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace AegisToDo.Models
 {
@@ -7,7 +8,14 @@ namespace AegisToDo.Models
         public int ItemId { get; set; }
 
         [Required]
+        [MaxLength(255, ErrorMessage = "Title is too long")]
         public string Title { get; set; }
+
+        [DataType(DataType.MultilineText)]
+        public string Details { get; set; }
+
+        [DataType(DataType.DateTime)]
+        public DateTime DueDate { get; set; }
 
         public bool IsDone { get; set; }
 

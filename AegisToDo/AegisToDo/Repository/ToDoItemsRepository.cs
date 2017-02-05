@@ -46,6 +46,8 @@ namespace AegisToDo.Repository
                 var item = new Entities.Model.ToDoItem
                 {
                     Title = itemToAdd.Title,
+                    Details = itemToAdd.Details,
+                    DueDate = itemToAdd.DueDate,
                     IsCompleted = false
                 };
 
@@ -66,6 +68,8 @@ namespace AegisToDo.Repository
                 {
                     existingItem.Title = itemToUpdate.Title;
                     existingItem.IsCompleted = itemToUpdate.IsDone;
+                    existingItem.DueDate = itemToUpdate.DueDate;
+                    existingItem.Details = itemToUpdate.Details;
                     await context.SaveChangesAsync();                    
                 }
 

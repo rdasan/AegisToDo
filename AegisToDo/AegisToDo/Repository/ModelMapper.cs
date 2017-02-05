@@ -12,13 +12,18 @@ namespace AegisToDo.Repository
                 ItemId = toDoItem.ItemId,
                 Title = toDoItem.Title,
                 IsDone = toDoItem.IsCompleted,
-                IsOverDue = IsItemOverDue()
+                Details = toDoItem.Details,
+                DueDate = toDoItem.DueDate,
+                IsOverDue = toDoItem.IsItemOverDue()
             };
         }
 
-        private static bool IsItemOverDue()
+        private static bool IsItemOverDue(this Entities.Model.ToDoItem item)
         {
-            //TODO: Add a Due Date column to the Database Table and check against that
+            if(item.DueDate < DateTime.Now && !item.IsCompleted)
+            {
+                return true;
+            }
             return false;
         }
     }
