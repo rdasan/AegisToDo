@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AegisToDo.Entities", "AegisToDo.Entities\AegisToDo.Entities.csproj", "{EC6E1BF8-EEC0-459F-949D-99CA0CF5C029}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AegisToDo", "AegisToDo\AegisToDo.csproj", "{67CAC149-DED7-4B85-BB9A-84B31A0E7A25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AegisToDo.Tests", "AegisToDo.Tests\AegisToDo.Tests.csproj", "{86736C1D-BCA3-4CDF-9982-FFF6A26177FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{EC6E1BF8-EEC0-459F-949D-99CA0CF5C029}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC6E1BF8-EEC0-459F-949D-99CA0CF5C029}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC6E1BF8-EEC0-459F-949D-99CA0CF5C029}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67CAC149-DED7-4B85-BB9A-84B31A0E7A25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67CAC149-DED7-4B85-BB9A-84B31A0E7A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67CAC149-DED7-4B85-BB9A-84B31A0E7A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67CAC149-DED7-4B85-BB9A-84B31A0E7A25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86736C1D-BCA3-4CDF-9982-FFF6A26177FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86736C1D-BCA3-4CDF-9982-FFF6A26177FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86736C1D-BCA3-4CDF-9982-FFF6A26177FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86736C1D-BCA3-4CDF-9982-FFF6A26177FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
