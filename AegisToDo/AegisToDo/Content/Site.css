@@ -55,7 +55,7 @@ table {
 }
 
 td, th {
-    border: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
 }
@@ -64,8 +64,64 @@ th {
     background-color: #dddddd;
 }
 
+.default-row {
+    color: black;
+}
+
+.red-row {
+    color: red;
+    font-weight: bold;
+}
+
+.red-row label {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 13px;
+    text-align: right;
+    width: 100%;
+    padding-top: 20px;
+}
+
 .imgbutton {
     cursor: pointer;
+}
+
+.imgcheckbox-wrapper {
+    position: relative;
+    height: 24px;
+    width: 24px;
+    text-align: center;
+}
+
+.imgcheckbox {
+    opacity:0;
+    height: 16px;
+    width: 17px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+input.imgcheckbox + label {
+    background:url('icons/pending.png') no-repeat;
+    height: 24px;
+    width: 24px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;   
+}
+
+input.imgcheckbox:checked + label {
+    background:url('icons/completed.png') no-repeat;
+    height: 24px;
+    width: 24px;
+    display:inline-block;
+    padding: 0 0 0 0px;    
 }
 
 

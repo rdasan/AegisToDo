@@ -16,11 +16,6 @@
     </script>
 </div>
 
-<div>
-<div id="editpanel"></div>
-
-</div>
-
 <body>
     <header>
         <h3>@ViewBag.Message</h3>
@@ -30,18 +25,25 @@
             <tr>
                 <th>Item Title</th>
                 <th>Due Date</th>
-                <th>Completed</th>
+                <th>Check Done</th>
                 <th></th>
                 <th></th>
             </tr>
             @foreach (var item in Model)
-            {
-                <tr>
+            {                
+                var tableRowClass = @item.IsOverDue ? "red-row" : "default-row";                
+                <tr class="@tableRowClass">
                     <td>@item.Title</td>
-                    <td>@item.DueDate</td>
-                    <td>@item.IsDone</td>
+                    <td>@item.DueDate.ToString("MMMM dd, yyyy")</td>
                     <td>
-                        <input id="edit-button" type="image" class="imgbutton" src="~/Content/icons/editicon.png"
+                        <div class="imgcheckbox-wrapper">
+                            <input type="checkbox" class="imgcheckbox" value="true" @(item.IsDone ? "checked=\"checked\"" : "")
+                                   onclick="location.href='@Url.Action("UpdateState", "ToDo", new { id = item.ItemId})' " />
+                            <label></label>
+                        </div>                                           
+                    </td>
+                    <td>
+                        <input type="image" class="imgbutton" src="~/Content/icons/editicon.png"
                                onclick="location.href='@Url.Action("Get","ToDo", new { id = item.ItemId })' " />                     
                     </td>
                     <td>
@@ -52,6 +54,9 @@
 
             }
         </table>
+        <div class="red-row">
+            <label>*Overdue items are shown in red based on today's date</label>            
+        </div>
     </div>
     <script src="~/Scripts/jquery.unobtrusive-ajax.js" type="text/javascript"></script>
     <script src="~/Scripts/jquery.unobtrusive-ajax.min.js" type="text/javascript"></script>

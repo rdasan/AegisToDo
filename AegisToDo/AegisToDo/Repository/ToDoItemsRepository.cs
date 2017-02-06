@@ -77,6 +77,23 @@ namespace AegisToDo.Repository
             }            
         }
 
+        public async Task<ToDoItem> UpdateItemState(int itemId)
+        {
+            using (context)
+            {
+                var item = await context.ToDoItems
+                                        .FirstOrDefaultAsync(toDoItem => toDoItem.ItemId == itemId);
+
+                if (item != null)
+                {
+                    item.IsCompleted = item.IsCompleted ? false : true;
+                    await context.SaveChangesAsync();
+                }
+
+                return item?.ToToDoItemViewModel();
+            }
+        }
+
         public async Task DeleteItem(int itemId)
         {
             using (context)

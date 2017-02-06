@@ -64,7 +64,7 @@ namespace AegisToDo.Controllers
             return PartialView("Edit", item);
         }
 
-        //POST: ToDoItems/UpdateItem/5
+        //POST: ToDoItems/UpdateItem
         public async Task<ActionResult> UpdateItem(ToDoItem itemToUpdate)
         {
             if (!ModelState.IsValid)
@@ -73,6 +73,19 @@ namespace AegisToDo.Controllers
             }
 
             var updatedItem = await repository.UpdateItem(itemToUpdate);
+
+            return RedirectToAction("Index");
+        }
+
+        //GET: ToDoItems/UpdateState/5
+        public async Task<ActionResult> UpdateState(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
+            var updatedItem = await repository.UpdateItemState(id.Value);
 
             return RedirectToAction("Index");
         }
