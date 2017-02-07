@@ -1,128 +1,109 @@
 ﻿body {
-    padding-top: 10px;
-    padding-bottom: 20px;
-    height: 100%;
+  padding-bottom: 20px;
+  height: 100%;
 }
-
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
-
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
 textarea {
-    max-width: 280px;
+  max-width: 280px;
 }
-
 .banner {
-    padding: 30px;
-    margin-bottom: 30px;
-    font-size: 21px;
-    font-weight: 200;
-    line-height: 2.1428571435;
-    color: white;
-    background-color: cornflowerblue;
-    text-align: center;
+  padding: 30px;
+  margin-bottom: 30px;
+  font-weight: 200;
+  line-height: 2.1428571435;
+  color: white;
+  background-color: cornflowerblue;
+  text-align: center;
 }
-
-.banner h1{
-    line-height: 1;
+.banner h1 {
+  line-height: 1;
 }
-
-
-.bottom-banner{
-    padding: 10px;
-    font-size: 14px;
-    font-weight: normal;  
-    line-height: 1;
-    color: white;
-    background-color: cornflowerblue; 
-    text-align: right;
-    position:fixed;
-    width: 100%;
-    bottom:0;
-    left:0;
+.bottom-banner {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: white;
+  background-color: cornflowerblue;
+  text-align: right;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
 }
-
-
 table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
-
-td, th {
-    border-bottom: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
-}
-
+td,
 th {
-    background-color: #dddddd;
+  border-bottom: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
 }
-
+th {
+  background-color: #dddddd;
+}
+.col-title {
+  width: 50%;
+}
 .default-row {
-    color: black;
+  color: black;
 }
-
 .red-row {
-    color: red;
-    font-weight: bold;
+  color: red;
+  font-weight: bold;
 }
-
 .red-row label {
-    font-weight: normal;
-    font-style: italic;
-    font-size: 13px;
-    text-align: right;
-    width: 100%;
-    padding-top: 20px;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 13px;
+  text-align: right;
+  width: 100%;
+  padding-top: 20px;
 }
-
 .imgbutton {
-    cursor: pointer;
+  cursor: pointer;
 }
-
 .imgcheckbox-wrapper {
-    position: relative;
-    height: 24px;
-    width: 24px;
-    text-align: center;
+  position: relative;
+  height: 24px;
+  width: 24px;
+  text-align: center;
 }
-
 .imgcheckbox {
-    opacity:0;
-    height: 16px;
-    width: 17px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    cursor: pointer;
+  opacity: 0;
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  cursor: pointer;
 }
-
 input.imgcheckbox + label {
-    background:url('icons/pending.png') no-repeat;
-    height: 24px;
-    width: 24px;
-    display:inline-block;
-    padding: 0 0 0 0px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;   
+  background: url('icons/pending.png') no-repeat;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  padding: 0 0 0 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
-
 input.imgcheckbox:checked + label {
-    background:url('icons/completed.png') no-repeat;
-    height: 24px;
-    width: 24px;
-    display:inline-block;
-    padding: 0 0 0 0px;    
+  background: url('icons/completed.png') no-repeat;
+  height: 24px;
+  width: 24px;
+  display: inline-block;
+  padding: 0 0 0 0px;
 }
-
-
-
