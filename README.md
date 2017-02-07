@@ -21,3 +21,6 @@ The project provides a basic MVC5 based webpage for basic CRUD operations for To
 - Mark a ToDo Item as **Done**.
 
 The Webpage also tells you if an item is **OverDue** based on today's date. (The item would be marked red)
+
+##### Note:
+This site is best viewed in **Chrome** or Microsoft Edge browser.
