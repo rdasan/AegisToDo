@@ -5,7 +5,7 @@ namespace AegisToDo.Repository
 {
     public static class ModelMapper
     {
-        public static ToDoItem ToToDoItemViewModel(this Entities.Model.ToDoItem toDoItem)
+        public static ToDoItem ToItemViewModel(this Entities.Model.ToDoItem toDoItem)
         {
             return new ToDoItem
             {
