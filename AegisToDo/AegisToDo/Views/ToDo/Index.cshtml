@@ -23,7 +23,7 @@
     <div>
         <table>
             <tr>
-                <th>@Html.DisplayNameFor(model => model.Title)</th>
+                <th class="col-title">@Html.DisplayNameFor(model => model.Title)</th>
                 <th>@Html.DisplayNameFor(model => model.DueDate)</th>
                 <th>@Html.DisplayNameFor(model  => model.IsDone)</th>
                 <th></th>
@@ -33,7 +33,7 @@
             {                
                 var tableRowClass = @item.IsOverDue ? "red-row" : "default-row";                
                 <tr class="@tableRowClass">
-                    <td>@item.Title</td>
+                    <td class="col-title">@item.Title</td>
                     <td>@item.DueDate.ToString("MMMM dd, yyyy")</td>
                     <td>
                         <div class="imgcheckbox-wrapper">

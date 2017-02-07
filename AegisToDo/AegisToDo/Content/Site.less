@@ -1,0 +1,132 @@
+﻿@import "SiteVariables.less";
+
+body {
+    padding-bottom: 20px;
+    height: 100%;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: @body-side-padding;
+    padding-right: @body-side-padding;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.banner {
+    padding: 30px;
+    margin-bottom: 30px;
+    font-weight: 200;
+    line-height: 2.1428571435;
+    color: @banner-text-color;
+    background-color: @banner-background-color;
+    text-align: center;
+}
+
+.banner h1{
+    line-height: 1;
+}
+
+
+.bottom-banner{
+    padding: 10px;
+    font-size: 14px;
+    font-weight: normal;  
+    line-height: 1;
+    color: @banner-text-color;
+    background-color: @banner-background-color; 
+    text-align: right;
+    position:fixed;
+    width: 100%;
+    bottom:0;
+    left:0;
+}
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border-bottom: 1px solid @table-header-background-color;
+    text-align: left;
+    padding: 8px;
+}
+
+th {
+    background-color: @table-header-background-color;
+}
+
+.col-title{
+    width: @table-tile-col-width;
+}
+
+.default-row {
+    color: @table-text-color-default;
+}
+
+.red-row {
+    color: @table-text-color-error;
+    font-weight: bold;
+}
+
+.red-row label {
+    font-weight: normal;
+    font-style: italic;
+    font-size: 13px;
+    text-align: right;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.imgbutton {
+    cursor: pointer;
+}
+
+.imgcheckbox-wrapper {
+    position: relative;
+    height: @icon-size;
+    width: @icon-size;
+    text-align: center;
+}
+
+.imgcheckbox {
+    opacity:0;
+    height: @icon-size;
+    width: @icon-size;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+
+input.imgcheckbox + label {
+    background:url('icons/pending.png') no-repeat;
+    height: @icon-size;
+    width: @icon-size;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;   
+}
+
+input.imgcheckbox:checked + label {
+    background:url('icons/completed.png') no-repeat;
+    height: @icon-size;
+    width: @icon-size;
+    display:inline-block;
+    padding: 0 0 0 0px;    
+}
+
+
+
