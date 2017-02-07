@@ -41,7 +41,7 @@ namespace AegisToDo.Controllers
         [HttpPost]
         public async Task<ActionResult> AddItem(ToDoItem itemToAdd)
         {
-            if(!ModelState.IsValid)
+            if(!ModelState.IsValid || itemToAdd == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
@@ -65,9 +65,10 @@ namespace AegisToDo.Controllers
         }
 
         //POST: ToDoItems/UpdateItem
+        [HttpPost]
         public async Task<ActionResult> UpdateItem(ToDoItem itemToUpdate)
         {
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid || itemToUpdate == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }

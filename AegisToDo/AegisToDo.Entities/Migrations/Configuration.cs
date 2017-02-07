@@ -16,6 +16,7 @@ namespace AegisToDo.Entities.Migrations
 
         protected override void Seed(ToDoContext context)
         {
+            //Test Data - debug test
             var milkItem = new ToDoItem
             {
                 ItemId = 1,

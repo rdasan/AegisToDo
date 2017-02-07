@@ -18,15 +18,16 @@ namespace AegisToDo.Repository
 
         public async Task<IEnumerable<ToDoItem>> GetItems()
         {
-            var toDoItemList = new List<ToDoItem>();
-
             using (context)
             {
-                var toDoitems = await context.ToDoItems.ToListAsync();
-                toDoitems.ForEach(item => toDoItemList.Add(item.ToToDoItemViewModel()));           
-            }
+                var toDoItemList = new List<ToDoItem>();
 
-            return toDoItemList.Any() ? toDoItemList : Enumerable.Empty<ToDoItem>();                
+                var toDoitems = await context.ToDoItems.ToListAsync();
+
+                toDoitems.ForEach(item => toDoItemList.Add(item.ToItemViewModel()));
+
+                return toDoItemList.Any() ? toDoItemList : Enumerable.Empty<ToDoItem>();
+            }                          
         }
 
         public async Task<ToDoItem> GetItemById(int itemId)
@@ -35,7 +36,7 @@ namespace AegisToDo.Repository
             {
                 var item = await context.ToDoItems.FirstOrDefaultAsync(toDoItem => toDoItem.ItemId == itemId);
 
-                return item?.ToToDoItemViewModel();
+                return item?.ToItemViewModel();
             }
         }
 
@@ -54,7 +55,7 @@ namespace AegisToDo.Repository
                 context.ToDoItems.Add(item);
                 await context.SaveChangesAsync();
 
-                return item?.ToToDoItemViewModel();
+                return item?.ToItemViewModel();
             }                 
         }
 
@@ -73,7 +74,7 @@ namespace AegisToDo.Repository
                     await context.SaveChangesAsync();                    
                 }
 
-                return existingItem?.ToToDoItemViewModel();
+                return existingItem?.ToItemViewModel();
             }            
         }
 
@@ -90,7 +91,7 @@ namespace AegisToDo.Repository
                     await context.SaveChangesAsync();
                 }
 
-                return item?.ToToDoItemViewModel();
+                return item?.ToItemViewModel();
             }
         }
 
@@ -105,7 +106,7 @@ namespace AegisToDo.Repository
                 {
                     context.ToDoItems.Remove(item);
                     await context.SaveChangesAsync();
-                }                
+                }               
             }
         }
     }
