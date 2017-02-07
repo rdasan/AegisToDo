@@ -176,9 +176,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\AegisToDo.Entities\AegisToDo.Entities.csproj">
       <Project>{ec6e1bf8-eec0-459f-949d-99ca0cf5c029}</Project>
