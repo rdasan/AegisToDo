@@ -145,6 +145,8 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <None Include="Content\Site.less" />
+    <Content Include="Content\introjs.css" />
+    <Content Include="Content\introjs.min.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -154,6 +156,8 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\intro.js" />
+    <Content Include="Scripts\intro.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -195,9 +199,6 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <TypeScriptCompile Include="Scripts\typings\intro.js\intro.js.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AegisToDo.Entities\AegisToDo.Entities.csproj">
