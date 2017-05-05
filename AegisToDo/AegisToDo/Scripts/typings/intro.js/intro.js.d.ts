@@ -3,6 +3,7 @@
 // Definitions by: Maxime Fabre <https://github.com/anahkiasen/>
 // Definitions: https://github.com/DefinitelyTyped/DefinitelyTyped
 
+
 declare namespace IntroJs {
     interface Step {
         intro: string;
