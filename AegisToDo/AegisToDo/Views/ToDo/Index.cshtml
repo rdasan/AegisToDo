@@ -10,14 +10,14 @@
 
 <body>
     <div>
-        <a class="btn btn-default btn-blue" id="flexi_form_start" href="javascript:void(0);" onclick="introJs().start()">Start Tour</a>
+        <a class="btn btn-default btn-blue" href="javascript:void(0);" onclick="introJs().start()">Start Tour</a>
     </div>
 <header>
     <h3>@ViewBag.Message</h3>
 </header>
 
 <div>
-    <button data-step="1" data-intro="Click here to add a new ToDo Item" id="addbutton" class="btn btn-default btn-green">Add</button>
+    <button data-step="2" data-intro="Click here to add a new ToDo Item" id="addbutton" class="btn btn-default btn-green">Add</button>
     <div id="addnew"></div>
     <script>
         document.getElementById("addbutton").onclick = function() { addItem() };
@@ -27,11 +27,9 @@
         }
     </script>
 </div>
-    
-    <div>    </div>
 
 <div>
-    <table>
+    <table data-step="1" data-intro="This is the default layout of the ToDo Table" data-position="top">
         <tr>
             <th class="col-title">@Html.DisplayNameFor(model => model.Title)</th>
             <th>@Html.DisplayNameFor(model => model.DueDate)</th>
@@ -52,11 +50,11 @@
                         <label></label>
                     </div>
                 </td>
-                <td>
+                <td data-step="3" data-intro="Click here to edit an item" data-position="left">
                     <input type="image" class="imgbutton" src="~/Content/icons/editicon.png"
                            onclick="location.href = '@Url.Action("Get", "ToDo", new {id = item.ItemId})' "/>
                 </td>
-                <td>
+                <td data-step="4" data-intro="Click here to delete an item" data-position="left">
                     <input type="image" class="imgbutton" src="~/Content/icons/trashcan.png"
                            onclick="location.href = '@Url.Action("Delete", "ToDo", new {id = item.ItemId})' "/>
                 </td>
