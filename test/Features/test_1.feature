@@ -14,9 +14,14 @@ Feature: Customer Created Investor
     
 Feature: My Feature
 
-  @ECM-6846 @WIP
+  @ECM-6846 @COMPLETED
   Scenario: Hello
     Given This is s given
     When My When
     Then MyThen
+    
+Feature: Second Feature
+
+  @ECM-6456 @WIP
+  Scenario: Second Hello
 
