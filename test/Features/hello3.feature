@@ -1,4 +1,4 @@
-  @ECM-6849 @WIP
+  @ECM-6849 @COMPLETED
   Scenario: New Hello 3
     Given This is a given 3
     When My When 3 from main
@@ -8,3 +8,6 @@
       | item       | name     |
       | big_item   | myname   |
       | small_item | textname |
+      
+      
+      Editing at local and subrepo

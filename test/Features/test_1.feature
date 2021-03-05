@@ -33,6 +33,6 @@ Feature: Second Feature
     
   @ECM-6850 @WIP
   Scenario: Hello Four
-    Given This is a fourth Given
+    Given This is a fourth Given something
 
 
