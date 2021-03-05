@@ -16,4 +16,7 @@ Feature: My Feature
 
   @ECM-6846 @WIP
   Scenario: Hello
+    Given This is s given
+    When My When
+    Then MyThen
 
