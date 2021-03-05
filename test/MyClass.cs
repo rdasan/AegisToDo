@@ -1,2 +1,4 @@
 class MyClass {
+
+    some changes
 }
