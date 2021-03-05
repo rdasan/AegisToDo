@@ -10,3 +10,10 @@ Feature: Customer Created Investor
     When Syndicate user creates new Crm Investor firm
     Then Crm Firm is created with valid CmgEntityKey and IsCustomerCreated set to true and other validations
     And Rolodex Firm is created with Firm Name and IsCustomerCreated set to true
+    
+    
+Feature: My Feature
+
+  @ECM-6846 @WIP
+  Scenario: Hello
+
