@@ -6,4 +6,4 @@ Hello This is a test
 
 Adding @COMPLETED
 
-Something changed locally
+Something changed locally and in subrepo
