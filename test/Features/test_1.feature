@@ -22,9 +22,13 @@ Feature: My Feature
     
 Feature: Second Feature
 
-  @ECM-6456 @WIP
+  @ECM-6456 @COMPLETED
   Scenario: Second Hello
 
   Given: Secong Hello given
+  
+  @ECM-6847 @WIP
+  Scenario: Hello Third
+    Given This is a third Given
 
 
