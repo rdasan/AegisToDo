@@ -1,0 +1,12 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = git@github.com:rdasan/testfeatures.git
+	branch = master
+	commit = 2fa668ef4304d397a6083d8b7acc74f5436a54fa
+	parent = ac27231ad256f77ed594c4060abeed72c7addc58
+	method = merge
+	cmdver = 0.4.3
