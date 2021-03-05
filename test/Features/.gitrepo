@@ -6,7 +6,7 @@
 [subrepo]
 	remote = git@github.com:rdasan/testfeatures.git
 	branch = master
-	commit = 533bf866b5cf0750d6db601bdbae87bd95f66dc4
-	parent = 30872edad95f71972511af9c83db587627448c50
+	commit = cc10624e4fe1d29005253b2c25a022811b5f3465
+	parent = d727c73e2d692f046b9601f738e276c346853b27
 	method = rebase
 	cmdver = 0.4.3
