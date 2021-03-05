@@ -6,4 +6,4 @@ Hello This is a test
 
 Adding @COMPLETED
 
-Something
+Something changed locally
