@@ -30,5 +30,9 @@ Feature: Second Feature
   @ECM-6847 @WIP
   Scenario: Hello Third
     Given This is a third Given
+    
+  @ECM-6850 @WIP
+  Scenario: Hello Four
+    Given This is a fourth Given
 
 
