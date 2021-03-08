@@ -1,5 +1,0 @@
-#ignore all kind of files
-*
-#except feature files and markdown files
-!*.feature
-!*.md
